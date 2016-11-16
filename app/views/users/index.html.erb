@@ -1,0 +1,15 @@
+
+
+ 
+ <table border="1">
+<tr>
+<th>Avatar</th>
+<th>Name</th>
+</tr>
+<% @users.each do |u| %>
+<tr>
+<td><%= gravatar_for u %></td>
+<td><%= u.name %></td>
+</tr>
+<% end %>
+</table>
