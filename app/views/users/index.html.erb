@@ -1,7 +1,4 @@
-
-
- 
- <table border="1">
+<table border="1">
 <tr>
 <th>Avatar</th>
 <th>Name</th>
@@ -13,3 +10,19 @@
 </tr>
 <% end %>
 </table>
+
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<%= will_paginate %>
+
+ul class="users">
+ <%= render @user %>
+   <li>
+      <%= gravatar_for user, size: 50 %>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
