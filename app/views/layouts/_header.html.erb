@@ -2,6 +2,9 @@
   <div class="container">
     <%= link_to "sample app", root_path, id: "logo" %>
     <nav>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", href_path %></li>
@@ -16,7 +19,7 @@
               <li><%= link_to "Settings", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
-                <%= link_to "Log out", logout_path, method: "delete" %>
+                 <%= link_to "logout", logout_path, method: :delete %>
               </li>
             </ul>
           </li>
